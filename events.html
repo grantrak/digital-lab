@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Calendar of events for Digital Lab Studio">
+  <meta name="keywords" content="calendar,events,lessons,concerts,gigs,dates,important,times,digital,lab">
+  <title>Events</title>
+  <link rel="stylesheet" href="css/normalize.css" type="text/css">
+  <link rel="stylesheet" href="css/skeleton.css" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Monoton&display=swap" rel="stylesheet">
+  <link href="css/responsive-calendar.css" rel="stylesheet" media="screen">
+  <link rel="stylesheet" href="css/jquery-ui.css">
+  <link rel="stylesheet" href="css/styles.css" type="text/css">
+  <script src="http://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script src="js/responsive-calendar.js"></script>
+  <script src="js/script.js" charset="utf-8"></script>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="row">
+        <div class="one-third column">
+          <img src="images/logo.png" alt="" id="navlogo">
+        </div>
+        <div class="two-thirds column">
+          <nav>
+            <ul id="menu">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="lessons.html">Lessons</a></li>
+              <li><a href="events.html">Events</a></li>
+              <li><a href="pricing.html">Pricing</a></li>
+              <li><a href="gallery.html">Gallery</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </nav>
+          <button class="hamburger">&#9776;</button>
+          <button class="cross">&#735;</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="menu">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="lessons.html">Lessons</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+  <main>
+
+    <article class="cal">
+      <h1>Important Upcoming Events</h1>
+      <div id="events-table">
+        <table class="u-full-width">
+          <thead>
+            <tr>
+              <th>Event</th>
+              <th>Date</th>
+              <th>Time</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Winter Sign-up Deadline</td>
+              <td>December 14th, 2019</td>
+              <td>5:30pm</td>
+            </tr>
+            <tr>
+              <td>Live Performance by Mark Smith</td>
+              <td>December 23rd, 2019</td>
+              <td>10:00pm</td>
+            </tr>
+            <tr>
+              <td>Start of Winter Courses</td>
+              <td>December 26th, 2019</td>
+              <td>6:00pm</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <h1>Calendar</h1>
+      <!-- Responsive calendar - START -->
+      <div class="responsive-calendar">
+        <div id="cal-title">
+          <h4 class="date"><span data-head-month></span> <span data-head-year></span></h4>
+        </div>
+        <div class="controls">
+
+          <a class="pull-left" data-go="prev">
+            <div class="btn"><button class="icon-chevron-left">Prev</button></div>
+          </a>
+
+          <a class="pull-right" data-go="next">
+            <div class="btn"><button class="icon-chevron-left">Next</button></div>
+          </a>
+        </div>
+        <hr />
+        <div class="day-headers">
+          <div class="day header">Mon</div>
+          <div class="day header">Tue</div>
+          <div class="day header">Wed</div>
+          <div class="day header">Thu</div>
+          <div class="day header">Fri</div>
+          <div class="day header">Sat</div>
+          <div class="day header">Sun</div>
+        </div>
+        <div class="days" data-group="days">
+          <!-- the place where days will be generated -->
+        </div>
+      </div>
+      <!-- Responsive calendar - END -->
+    </article>
+    <div id="dialog">
+      <h5 class="dialog-name"></h5>
+      <p class="dialog-info"></p>
+    </div>
+  </main>
+
+
+  <!--<script src="js/jquery.js"></script>-->
+  <script src="js/responsive-calendar.js"></script>
+  <script>
+    $(document).ready(function() {
+      $("#dialog").dialog({
+        width: "50%",
+        autoOpen: false,
+        resizable: false,
+        draggable: false,
+        modal: false
+      });
+
+      function addLeadingZero(num) {
+        if (num < 10) {
+          return "0" + num;
+        } else {
+          return "" + num;
+        }
+      }
+      $('.responsive-calendar').responsiveCalendar({
+
+        events: {
+          "2019-12-14": {
+            "name": "Winter Sign-up Deadline",
+            "hour": "5:30pm",
+            "info": "All students must be registerd and payed in full by this time in order to reserve your spot."
+          },
+          "2019-12-23": {
+            "name": "Concert",
+            "hour": "10:00pm",
+            "info": "One of our instructors, Mark Smith, will be performing a live show at the Aggie Theatre in Fort Collins."
+          },
+          "2019-12-26": {
+            "name": "Winter Courses Start",
+            "hour": "6:00pm",
+            "info": "All multi-week winter courses begin on this day."
+          }
+        },
+        onActiveDayClick: function(events) {
+          var thisDayEvent, key;
+
+          key = $(this).data('year') + '-' + addLeadingZero($(this).data('month')) + '-' + addLeadingZero($(this).data('day'));
+          thisDayEvent = events[key];
+          $(".ui-dialog-title").text(thisDayEvent.name);
+          $(".dialog-name").text(thisDayEvent.hour);
+          $(".dialog-info").text("");
+          $(".dialog-info").text(thisDayEvent.info);
+
+          //document.getElementById("dialog").textContent = thisDayEvent.hour + ":   " + thisDayEvent.name;
+          //$("#dialog").html(thisDayEvent.dayEvents.name);
+          $("#dialog").dialog("open");
+        }
+      });
+
+    });
+  </script>
+
+
+</body>
+
+</html>

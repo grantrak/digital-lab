@@ -1,0 +1,905 @@
+/*Universal*/
+html {
+  min-width: 480px;
+}
+
+
+
+
+
+/*Calendar*/
+
+.container {
+  margin-bottom: 100px;
+}
+
+#dialog {
+  display: none;
+}
+
+.cal {
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  padding-left: 7%;
+  padding-right: 7%;
+}
+
+#cal-title {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.responsive-calendar {
+  margin-top: 60px;
+}
+
+.responsive-calendar .day.active a {
+    background-color: #3fa7e0;
+    color: #ffffff;
+    border-radius: 10px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 4px 8px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.428571429px;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none;
+    /*border: 2px solid #3fa7e0;
+    color: #3fa7e0;
+    background-color: white;*/
+    user-select: none;
+}
+
+.icon-chevron-left {
+  border: 1px solid #3fa7e0;
+  color: #3fa7e0;
+  background-color: white;
+
+}
+
+.icon-chevron-left:visited, .icon-chevron-left:focus {
+  border: 1px solid #3fa7e0;
+  color: #3fa7e0;
+  background-color: white;
+}
+
+.icon-chevron-left:hover {
+  border: 1px solid #3fa7e0;
+  color: white;
+  background-color: #3fa7e0;
+}
+
+.dates {
+  margin-left: 25%;
+}
+
+.date {
+  font-weight: 500;
+  font-size: 36px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+hr {
+  margin-top: 1px;
+}
+
+.ui-dialog-title {
+  font-family: Raleway;
+  font-size: 1.25em;
+  text-align: center;
+}
+
+.ui-widget {
+  font-family: Raleway;
+}
+
+.ui-dialog {
+  width: 2000px;
+}
+
+.ui-widget-header {
+    border: 1px solid #3fa7e0;
+    background: #3fa7e0;
+    color: white;
+    font-weight: bold;
+}
+
+#events-table {
+  margin-bottom: 100px;
+}
+
+h5 {
+  margin-top: 10px;
+  margin-bottom: 1px;
+}
+
+
+
+
+/*Hamburger*/
+
+.hamburger {
+  background: none;
+  position: absolute;
+  top: 10px;
+  right: 5px;
+  line-height: 45px;
+  padding: 5px 15px 0px 15px;
+  color: white;
+  border: 0;
+  font-size: 2em;
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+  z-index: 10000000000000;
+}
+
+.hamburger:hover, .cross:hover, .hamburger:active, .cross:active {
+  color: #3fa7e0;
+}
+
+.cross {
+  background: none;
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  padding: 7px 15px 0px 15px;
+  color: white;
+  border: 0;
+  font-size: 5em;
+  line-height: 65px;
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+  z-index: 10000000000000;
+}
+
+.menu {
+  z-index: 1000000;
+  font-weight: bold;
+  font-size: 0.8em;
+  width: 100%;
+  background: black;
+  position: absolute;
+  text-align: center;
+  font-size: 12px;
+}
+
+.menu ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  list-style-image: none;
+}
+
+.menu li {
+  display: block;
+  padding: 15px 0 15px 0;
+  border-top: #dddddd 1px solid;
+}
+
+.menu li:hover {
+  display: block;
+  background-color: rgb(203, 66, 218);
+  color: white;
+  padding: 15px 0 15px 0;
+  border-top: #dddddd 1px solid;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  margin: 0px;
+  color: white;
+}
+
+.menu ul li a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.menu ul li a:active {
+  color: #3fa7e0;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #666;
+}
+
+.menu a:hover {
+  text-decoration: none;
+  color: white;
+}
+
+/*Text*/
+@font-face {
+  font-family: 'BebasNeue-Regular';
+  src: url('BebasNeue-Regular.woff') format('woff'),
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    url('BebasNeue-Regular.ttf') format('truetype');
+  /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}
+
+h1 {
+  font-family: "BebasNeue-Regular";
+  letter-spacing: 1px;
+}
+
+.container {
+  width: 100%;
+}
+
+footer {
+  background: black;
+  margin-bottom: 0;
+}
+
+header {
+  background: black;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+nav {
+  text-align: center;
+}
+
+nav ul li {
+  margin: 0 auto;
+  display: inline-block;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-family: "BebasNeue-Regular";
+}
+
+nav ul li a:hover {
+  text-decoration: none;
+}
+
+.container {
+  max-width: none;
+}
+
+.row {
+  width: 100%;
+  margin: 0;
+}
+
+/*Buttons*/
+.button {
+  border: 2px solid white;
+  color: white;
+  font-size: 18px;
+  background-color: none;
+  transition: background-color .5s;
+  transition: color .25s;
+}
+
+.button:hover {
+  border: 2px solid white;
+  color: #3fa7e0;
+  font-size: 18px;
+  background-color: white;
+}
+
+.button.button-primary {
+  border: 2px solid #3fa7e0;
+  color: #3fa7e0;
+  background-color: white;
+}
+
+input[type="submit"].button-primary {
+  border: 2px solid #3fa7e0;
+  color: white;
+  background-color: #3fa7e0;
+}
+
+input[type="submit"].button-primary:hover {
+  border: 2px solid #3fa7e0;
+  color: #3fa7e0;
+  background-color: white;
+}
+
+#cta {
+  text-align: center;
+}
+
+a {
+  color: white;
+}
+
+.lessons {
+  max-width: 800px;
+  margin: 0 auto;
+  padding-left: 7%;
+  padding-right: 7%;
+}
+
+.lessons h1 {
+  padding-top: 100px;
+  color: white;
+}
+
+.whitediagonal {
+  margin-top: 0;
+  position: relative;
+  width: 100%;
+  height: 350px;
+  clip-path: polygon(0 0, 100% 0, 100% 350px, 0 300px);
+  z-index: 1;
+  margin-bottom: -80px;
+  background-image: url(../images/beatpadgallery.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+#lessondesc {
+  padding-top: 20px;
+}
+/*Home Page*/
+/*Blue Section*/
+#coverblue {
+  width: 100%;
+  height: 400px;
+  background-color: #3fa7e0;
+  clip-path: polygon(0 0, 100% 0, 100% 300px, 0 400px);
+  z-index: 2;
+}
+
+/*White Section*/
+#cover2 {
+  height: auto;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+/*Desktop Query*/
+@media only screen and (min-width: 1025px) {
+
+  /*Navigation*/
+  .menu, .cross, .hamburger {
+    display: none;
+  }
+
+  .gallerymenu {
+    bottom: -24px;
+  }
+
+  #cover2 {
+    height: 400px;
+  }
+
+  header {
+    height: 100px;
+    z-index: 5;
+  }
+
+  nav {
+    text-align: right;
+    margin-right: 0;
+  }
+
+  nav ul {
+    margin: 0 auto;
+    position: absolute;
+    bottom: -17px;
+    right: 5%;
+  }
+
+  nav ul li a {
+    padding: 1.5rem;
+    padding-top: 0;
+    display: inline-block;
+
+    background-image: none;
+    transition: padding-top .4s;
+  }
+
+  nav ul li a:hover {
+    background-image: linear-gradient(black, rgb(203, 66, 218));
+    color: white;
+    padding-top: 50px;
+  }
+
+  nav ul li a:active {
+    color: #3fa7e0;
+  }
+
+  nav ul li a {
+    font-size: 28px;
+    letter-spacing: 2px;
+  }
+
+  #navlogo {
+    margin-top: 11px;
+    margin-left: 36%;
+    height: 80px;
+  }
+
+  #smallmenu {
+    display: none;
+  }
+
+  /*Home Page Big Photo*/
+  #lessonphoto{
+    background-image: url(../images/beatpadgallery.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 350px;
+    clip-path: polygon(0 0, 100% 0, 100% 350px, 0 300px);
+    margin-bottom: -50px;
+    z-index: 2;
+    position: relative;
+  }
+  #coverphoto {
+    background-image: url(../images/concert.jpg);
+    background-size: cover;
+    background-position: 50% 90%;
+    width: 100%;
+    height: 350px;
+    text-align: center;
+    clip-path: polygon(0 0, 100% 0, 100% 350px, 0 300px);
+    margin-bottom: -50px;
+    z-index: 2;
+    position: relative;
+  }
+
+  #coverphoto h1 {
+    color: white;
+    font-family: "Monoton";
+    font-size: 64px;
+    letter-spacing: 3px;
+    padding-top: 130px;
+  }
+
+  /*Short Bio*/
+  #homebio {
+    width: 800px;
+    margin: 0 auto;
+    padding-top: 75px;
+  }
+
+  #homebio p {
+    font-size: 20px;
+    color: white;
+    letter-spacing: 1px;
+  }
+
+  #learnmore {
+    max-width: 1075px;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 100px;
+  }
+
+  /*Contact Us*/
+  #formcontainer {
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 100px;
+  }
+
+  #formcontainer form {
+    margin-top: 50px;
+  }
+
+  #formcontainer h2 {
+    font-size: 18px;
+  }
+
+  /*Pricing Tables*/
+  #pricingcontainer {
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 100px;
+  }
+
+
+
+
+
+  .hamburger-container {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  header {
+    height: 77px;
+    padding: 0;
+  }
+
+  header #navlogo {
+    height: 65px;
+    margin: 0 auto;
+    margin-top: 5px;
+  }
+
+  .navlogo {
+    padding-left: 100px;
+  }
+
+  header div.one-third.column {
+    width: 100%;
+    text-align: center;
+  }
+
+  #menu {
+    display: none;
+  }
+
+  #smallmenu {
+    display: block;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    margin-bottom: 0;
+  }
+
+  ul li {
+    padding: 1rem;
+    margin: 0;
+  }
+
+  ul li a {
+    color: white;
+    text-decoration: none;
+    font-family: "BebasNeue-Regular";
+    font-size: 30px;
+    letter-spacing: 2px;
+  }
+
+  ul li a:hover {
+    color: white;
+  }
+
+  ul li:hover {
+    background-color: rgb(203, 66, 218);
+    color: white;
+  }
+
+  #coverphoto {
+    background-image: url(../images/concert.jpg);
+    background-size: cover;
+    background-position: 50% 90%;
+    width: 100%;
+    height: 350px;
+    text-align: center;
+    clip-path: polygon(0 0, 100% 0, 100% 350px, 0 300px);
+    margin-bottom: -50px;
+    z-index: 2;
+    position: relative;
+  }
+
+  #lessonphoto {
+    background-image: url(../images/beatpadgallery.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 350px;
+    clip-path: polygon(0 0, 100% 0, 100% 350px, 0 300px);
+    margin-bottom: -50px;
+    z-index: 2;
+    position: relative;
+  }
+
+  #coverphoto h1 {
+    color: white;
+    font-family: "Monoton";
+    font-size: 48px;
+    letter-spacing: 3px;
+    padding-top: 100px;
+  }
+
+  #homebio {
+    width: 600px;
+    margin: 0 auto;
+    padding-top: 100px;
+  }
+
+  #homebio p {
+    font-size: 16px;
+    color: white;
+    letter-spacing: 1px;
+  }
+
+  #learnmore {
+    max-width: 700px;
+    margin: 0 auto;
+    margin-top: 100px;
+    margin-bottom: 70px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  header {
+    height: 77px;
+    padding: 0;
+  }
+
+  header #navlogo {
+    height: 65px;
+    margin: 0 auto;
+    margin-top: 5px;
+  }
+
+  header div.one-third.column {
+    width: 100%;
+    text-align: center;
+  }
+
+  #menu {
+    display: none;
+  }
+
+  #smallmenu {
+    display: block;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    margin-bottom: 0;
+  }
+
+  ul li {
+    padding: 1rem;
+    margin: 0;
+  }
+
+  ul li a {
+    color: white;
+    text-decoration: none;
+    font-family: "BebasNeue-Regular";
+    font-size: 30px;
+    letter-spacing: 2px;
+  }
+
+  ul li a:hover {
+    color: white;
+  }
+
+  ul li:hover {
+    background-color: rgb(203, 66, 218);
+    color: white;
+  }
+
+  #coverphoto {
+    background-image: url(../images/concert.jpg);
+    background-size: cover;
+    background-position: 50% 90%;
+    width: 100%;
+    height: 350px;
+    text-align: center;
+    clip-path: polygon(0 0, 100% 0, 100% 350px, 0 300px);
+    margin-bottom: -50px;
+    z-index: 2;
+    position: relative;
+  }
+
+  #lessonphoto {
+    background-image: url(../images/beatpadgallery.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 350px;
+    clip-path: polygon(0 0, 100% 0, 100% 350px, 0 300px);
+    margin-bottom: -50px;
+    z-index: 2;
+    position: relative;
+  }
+
+
+
+  #coverphoto h1 {
+    color: white;
+    font-family: "Monoton";
+    font-size: 48px;
+    letter-spacing: 3px;
+    padding-top: 50px;
+  }
+
+  #homebio {
+    width: 450px;
+    margin: 0 auto;
+    padding-top: 80px;
+  }
+
+  #homebio p {
+    font-size: 14px;
+    color: white;
+    letter-spacing: 1px;
+  }
+
+  #learnmore {
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto;
+    margin-top: 100px;
+    margin-bottom: 70px;
+  }
+
+  .button.button-primary {
+    margin-bottom: 150px;
+  }
+
+  .one-half.column {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+
+}
+
+
+
+
+
+
+/*Gallery and bootsrap integration for gallery page*/
+
+#gallery {
+  padding: 50px;
+  padding-left: 50px;
+}
+
+#image-gallery::after, #image-gallery::before{
+  box-sizing: none;
+}
+
+.img-wrapper {
+  position: relative;
+  margin-top: 15px;
+}
+
+.img-wrapper img {
+  width: 100%;
+}
+.img-overlay {
+  background: rgba(0,0,0,0.7);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+
+}
+
+.img-overlay i {
+  color: #fff;
+  font-size: 3em;
+}
+
+#overlay {
+  background: rgba(0,0,0,0.7);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+    @media screen and (min-width:768px) {
+      #overlay img {
+        width: 60%;
+        }
+    }
+    @media screen and (min-width:1200px) {
+      #overlay img {
+        width: 50%;
+        }
+    }
+
+
+
+#overlay img {
+  margin: 0;
+  width: 80%;
+  height: auto;
+  object-fit: contain;
+  padding: 5%;
+}
+
+#nextButton {
+  color: #fff;
+  font-size: 2em;
+  transition: opacity 0.8s;
+}
+  #nextButton:hover {
+    opacity: 0.7;
+  }
+  @media screen and (min-width:768px) {
+    #nextButton {
+      font-size: 3em;
+    }
+  }
+
+
+  #prevButton {
+    color: #fff;
+    font-size: 2em;
+    transition: opacity 0.8s;
+  }
+    #prevButton:hover {
+      opacity: 0.7;
+    }
+    @media screen and (min-width:768px) {
+      #prevButton {
+        font-size: 3em;
+      }
+    }
+
+#exitButton {
+  color: #fff;
+  font-size: 3em;
+  transition: opacity 0.8s;
+  position: absolute;
+  top: 15px;
+  right: 50px;
+}
+  #exitButton:hover {
+    opacity: 0.7;
+  }
+  @media screen and (min-width:768px) {
+    #exitbutton {font-size: 4em;
+  }
+}
+
+@media screen and (max-width:1024px) {
+  #exitButton {
+    top: 100px;
+  }
+
+}
+
+
+header * {
+  box-sizing: content-box;
+}
+
+
+#gallerycontainer {
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 100px;
+  text-align: center;
+}
+
+
+
+
+
+
+
+/*Table spacing*/
+
+table {
+  margin-top: 50px;
+  margin-bottom: 100px;
+}

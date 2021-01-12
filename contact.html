@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact form for Digital Lab Studio.">
+  <meta name="keywords" content="contact,email,form,questions,lessons,booking,digital,lab">
+  <title>Contact</title>
+  <link rel="stylesheet" href="css/normalize.css" type="text/css">
+  <link rel="stylesheet" href="css/skeleton.css" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Monoton&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" type="text/css">
+  <script src="http://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+  <script src="js/script.js" charset="utf-8"></script>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="row">
+        <div class="one-third column">
+          <img src="images/logo.png" alt="" id="navlogo">
+        </div>
+        <div class="two-thirds column" id="dropdown">
+          <nav>
+            <ul  id="menu">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="lessons.html">Lessons</a></li>
+              <li><a href="events.html">Events</a></li>
+              <li><a href="pricing.html">Pricing</a></li>
+              <li><a href="gallery.html">Gallery</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </nav>
+          <button class="hamburger">&#9776;</button>
+          <button class="cross">&#735;</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="menu">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="lessons.html">Lessons</a></li>
+    <li><a href="events.html">Events</a></li>
+    <li><a href="pricing.html">Pricing</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</div>
+
+  <main>
+
+    <div class="cal">
+      <div id="formcontainer">
+        <h1>Contact Us</h1>
+
+        <form>
+          <div class="row">
+            <div class="six columns">
+              <label for="exampleEmailInput">Your email</label>
+              <input class="u-full-width" type="email" placeholder="test@mailbox.com" id="exampleEmailInput">
+            </div>
+            <div class="six columns">
+              <label for="exampleRecipientInput">Reason for contacting</label>
+              <select class="u-full-width" id="exampleRecipientInput">
+                <option value="Option 1">Questions</option>
+                <option value="Option 2">Booking Lessons</option>
+                <option value="Option 3">Booking Events</option>
+              </select>
+            </div>
+          </div>
+          <label for="exampleMessage">Message</label>
+          <textarea class="u-full-width" placeholder="Hello..." id="exampleMessage"></textarea>
+          <label class="example-send-yourself-copy">
+            <input type="checkbox">
+            <span class="label-body">Send a copy to yourself</span>
+          </label>
+          <input class="button-primary" type="submit" value="Submit">
+        </form>
+      </div>
+    </div>
+  </main>
+
+</body>
+
+</html>
