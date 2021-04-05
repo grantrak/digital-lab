@@ -84,7 +84,7 @@ body, html {
 
 .date {
   font-weight: 500;
-  font-size: 36px;
+  font-size: 32px;
   display: block;
   margin-bottom: 10px;
 }
@@ -283,7 +283,7 @@ nav ul li a:hover {
 .button {
   border: 2px solid white;
   color: white;
-  font-size: 18px;
+  font-size: 16px;
   background-color: none;
   transition: background-color .5s;
   transition: color .25s;
@@ -292,7 +292,7 @@ nav ul li a:hover {
 .button:hover {
   border: 2px solid white;
   color: #3fa7e0;
-  font-size: 18px;
+  font-size: 16px;
   background-color: white;
 }
 
@@ -356,7 +356,7 @@ a {
   width: 100%;
   height: 400px;
   background-color: #3fa7e0;
-  clip-path: polygon(0 0, 100% 0, 100% 300px, 0 400px);
+  clip-path: polygon(0 0, 100% 0, 100% 350px, 0 400px);
   z-index: 2;
 }
 
@@ -465,7 +465,7 @@ a {
     font-family: "Monoton";
     font-size: 64px;
     letter-spacing: 3px;
-    padding-top: 130px;
+    padding: 100px 50px;
   }
 
   /*Short Bio*/
@@ -605,7 +605,7 @@ a {
     font-family: "Monoton";
     font-size: 48px;
     letter-spacing: 3px;
-    padding-top: 70px;
+    padding: 80px 30px;
   }
 
   #homebio {
@@ -685,7 +685,7 @@ a {
     width: 100%;
     height: 350px;
     text-align: center;
-    clip-path: polygon(0 0, 100% 0, 100% 350px, 0 300px);
+    clip-path: polygon(0 0, 100% 0, 100% 325px, 0 300px);
     margin-bottom: -50px;
     z-index: 2;
     position: relative;
@@ -738,9 +738,9 @@ a {
     margin-bottom: 70px;
   }
 
-  .button.button-primary {
+  /*.button.button-primary {
     margin-bottom: 150px;
-  }
+  }*/
 
   .one-half.column {
     width: 100%;
@@ -758,8 +758,16 @@ a {
 /*Gallery and bootsrap integration for gallery page*/
 
 #gallery {
-  padding: 50px;
-  padding-left: 50px;
+  padding: 10px;
+  padding-left: 10px;
+  
+}
+
+@media screen and (min-width:768px) {
+  #gallery {
+    padding: 50px;
+    padding-left: 50px;
+    }
 }
 
 #image-gallery::after, #image-gallery::before{
@@ -907,4 +915,24 @@ header * {
 table {
   margin-top: 50px;
   margin-bottom: 100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.centered {
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
 }
