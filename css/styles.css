@@ -6,7 +6,6 @@ body, html {
 
 
 
-
 /*Calendar*/
 
 .container {
@@ -169,12 +168,10 @@ h5 {
 .menu {
   z-index: 1000000;
   font-weight: bold;
-  font-size: 0.8em;
   width: 100%;
   background: black;
   position: absolute;
   text-align: center;
-  font-size: 12px;
 }
 
 .menu ul {
@@ -241,10 +238,7 @@ h1 {
   width: 100%;
 }
 
-footer {
-  background: black;
-  margin-bottom: 0;
-}
+
 
 header {
   background: black;
@@ -367,7 +361,6 @@ a {
   height: auto;
   width: 100%;
   text-align: center;
-  margin-bottom: 100px;
 }
 
 /*Desktop Query*/
@@ -553,12 +546,11 @@ a {
     margin-bottom: 0;
   }
 
-  ul li {
-    padding: 1rem;
+  .menu ul li {
     margin: 0;
   }
 
-  ul li a {
+  .menu ul li a {
     color: white;
     text-decoration: none;
     font-family: "BebasNeue-Regular";
@@ -566,11 +558,11 @@ a {
     letter-spacing: 2px;
   }
 
-  ul li a:hover {
+  .menu ul li a:hover {
     color: white;
   }
 
-  ul li:hover {
+  .menu ul li:hover {
     background-color: rgb(203, 66, 218);
     color: white;
   }
@@ -658,12 +650,11 @@ a {
     margin-bottom: 0;
   }
 
-  ul li {
-    padding: 1rem;
+  .menu ul li {
     margin: 0;
   }
 
-  ul li a {
+  .menu ul li a {
     color: white;
     text-decoration: none;
     font-family: "BebasNeue-Regular";
@@ -671,11 +662,11 @@ a {
     letter-spacing: 2px;
   }
 
-  ul li a:hover {
+  .menu ul li a:hover {
     color: white;
   }
 
-  ul li:hover {
+  .menu ul li:hover {
     background-color: rgb(203, 66, 218);
     color: white;
   }
@@ -754,7 +745,101 @@ a {
 
 
 
+footer {
+  height: 350px;
+  width: 100%;
+  background-color: black;
+}
 
+.footer-container {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.footer-column {
+  box-sizing: border-box;
+  float: left;
+  width: 33%;
+  height: 350px;
+}
+
+.footer-title {
+  margin-top: 45px;
+  color: white;
+  text-align: center;
+  
+}
+
+.footer-title h1 {
+  border-bottom: 1px solid white;
+  margin: 0 30px;
+  font-size: 36px;
+  padding: 0 10px;
+}
+
+.footer-content {
+  margin: 0 30px;
+  padding: 0 10px;
+  text-align: center;
+}
+
+#hours {
+  list-style: none;
+  margin-top: 15px;
+}
+
+#hours .footer-li {
+  margin-bottom: 3px;
+  color: white;
+  font-size: 16px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  #hours {
+    list-style: none;
+    margin-top: 15px;
+  }
+  
+  #hours .footer-li {
+    margin-bottom: 3px;
+    color: white;
+    font-size: 16px;
+  }
+}
+
+#social {
+  font-size: 36px;
+  color: white;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#social a {
+  margin: 0 3%;
+}
+
+#social a:hover {
+  color: #3fa7e0;
+}
+
+@media only screen and (max-width: 767px) {
+  
+  footer {
+    height: 800px;
+    padding-top: 30px;
+  }
+  
+  .footer-column {
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+  }
+
+  
+}
 
 
 /*Gallery and bootsrap integration for gallery page*/
@@ -944,4 +1029,17 @@ table {
   width: 100%;
   text-align: center;
   margin: 0 auto;
+}
+
+
+
+
+
+
+//////////    FOOTER
+
+footer {
+  height: 500px;
+  width: 100%;
+  background-color: #3fa7e0;
 }
