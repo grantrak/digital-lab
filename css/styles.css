@@ -326,8 +326,16 @@ a {
 }
 
 .lessons h1 {
-  padding-top: 100px;
+  padding-top: 50px;
   color: white;
+  font-size: 86px;
+}
+
+@media only screen and (max-width: 1025px) {
+  .lessons h1 {
+    text-align: center;
+    font-size: 72px;
+  }
 }
 
 .whitediagonal {
