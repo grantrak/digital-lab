@@ -4,6 +4,13 @@ body, html {
   width: 100%;
 }
 
+main {
+  min-height: calc(100vh - 545px);
+}
+
+
+
+
 
 
 /*Calendar*/
@@ -1046,8 +1053,3 @@ table {
 
 //////////    FOOTER
 
-footer {
-  height: 500px;
-  width: 100%;
-  background-color: #3fa7e0;
-}
